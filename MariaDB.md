@@ -189,6 +189,28 @@ MariaDB [tutorial]> insert into books (Title, Author, Price, published_date)
     -> values ('Learning CoreDNS', '존 벨라마릭,크리켓 리우', 25000, '2021-08-31');
 Query OK, 1 row affected (0.002 sec)
 
+MariaDB [tutorial]> 
+```
+
+## 조회하기
+````
+MariaDB [tutorial]> select * from books ; 
++-------+-------------------------+-----------------------------------+-------+----------------+
+| SeqNo | Title                   | Author                            | Price | published_date |
++-------+-------------------------+-----------------------------------+-------+----------------+
+|     1 | TCP/IP 완벽 가이드      | 강유,김혁진,...                   | 45000 | 2021-12-01     |
+|     2 | NGINX Cookbook          | 데릭 디용기                       | 20000 | 2021-06-01     |
+|     3 | Learning CoreDNS        | 존 벨라마릭,크리켓 리우           | 25000 | 2021-08-31     |
++-------+-------------------------+-----------------------------------+-------+----------------+
+3 rows in set (0.018 sec)
+
 MariaDB [tutorial]>
+```
+
+## 종료하기
+```
+MariaDB [tutorial]> exit
+Bye
+PS C:\workspace\SpringBootMariaDB>
 ```
 
