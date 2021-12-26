@@ -30,5 +30,11 @@
             </tr>
         </c:forEach>
     </table>
+    <table>
+        <tr>
+            <th> springframework boot version </th>
+            <td><% String version = org.springframework.core.SpringVersion.getVersion( ); %><%=version%></td>
+        </tr>
+    </table>
 </body>
 </html>
