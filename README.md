@@ -6,7 +6,7 @@
 | springboot | 2.2.3 |  
 | openJDK | 11.0.11 |  
 | maven | 2.2.3 | 
-| myBatis | 1.3.0 | 
+| myBatis | 3.4.1 | 
 | MariaDB | 10.8.0 | 
 
 ## MariaDB 정보
@@ -65,7 +65,7 @@ PS C:\workspace\SpringBootMariaDB> ./mvnw spring-boot:run
 [INFO]
 [INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ SpringBootSample ---
 [INFO] Nothing to compile - all classes are up to date
-[INFO] 
+[INFO]
 [INFO] <<< spring-boot-maven-plugin:2.2.3.RELEASE:run (default-cli) < test-compile @ SpringBootSample <<<
 [INFO]
 [INFO]
@@ -80,28 +80,29 @@ PS C:\workspace\SpringBootMariaDB> ./mvnw spring-boot:run
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::        (v2.2.3.RELEASE)
 
-2021-12-26 11:38:31.236  INFO 2640 --- [           main] c.e.demo.SpringBootSampleApplication     : Starting SpringBootSampleApplication on DESKTOP-QR555PR with PID 2640 (C:\workspace\SpringBootMariaDB\target\classes started by taeey in C:\workspace\SpringBootMariaDB)
-2021-12-26 11:38:31.239  INFO 2640 --- [           main] c.e.demo.SpringBootSampleApplication     : No active profile set, falling back to default profiles: default
-2021-12-26 11:38:32.499  INFO 2640 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2021-12-26 11:38:32.506  INFO 2640 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-12-26 11:38:32.506  INFO 2640 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
-2021-12-26 11:38:32.664  INFO 2640 --- [           main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
-2021-12-26 11:38:32.672  INFO 2640 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-12-26 11:38:32.672  INFO 2640 --- [           main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1409 ms
-2021-12-26 11:38:32.863  INFO 2640 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-12-26 11:38:32.967  INFO 2640 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2021-12-26 11:38:32.970  INFO 2640 --- [           main] c.e.demo.SpringBootSampleApplication     : Started SpringBootSampleApplication in 1.976 seconds (JVM running for 2.249)
-2021-12-26 11:38:34.559  INFO 2640 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-12-26 11:38:34.560  INFO 2640 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-12-26 11:38:34.564  INFO 2640 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
-2021-12-26 11:38:34.587  INFO 2640 --- [nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-12-26 11:38:34.619  INFO 2640 --- [nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-12-26 12:47:21.118  INFO 24152 --- [           main] c.e.demo.SpringBootSampleApplication     : Starting SpringBootSampleApplication on DESKTOP-QR555PR with PID 24152 (C:\workspace\SpringBootMariaDB\target\classes started by taeey in C:\workspace\SpringBootMariaDB)
+2021-12-26 12:47:21.120  INFO 24152 --- [           main] c.e.demo.SpringBootSampleApplication     : No active profile set, falling back to default profiles: default
+2021-12-26 12:47:22.453  INFO 24152 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-12-26 12:47:22.461  INFO 24152 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-12-26 12:47:22.461  INFO 24152 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2021-12-26 12:47:22.639  INFO 24152 --- [           main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2021-12-26 12:47:22.646  INFO 24152 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-12-26 12:47:22.647  INFO 24152 --- [           main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1502 ms
+2021-12-26 12:47:22.855  INFO 24152 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-12-26 12:47:22.896  INFO 24152 --- [           main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-12-26 12:47:22.977  INFO 24152 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-12-26 12:47:22.980  INFO 24152 --- [           main] c.e.demo.SpringBootSampleApplication     : Started SpringBootSampleApplication in 2.093 seconds (JVM running for 2.356)
+2021-12-26 12:47:32.980  INFO 24152 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-12-26 12:47:32.981  INFO 24152 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-12-26 12:47:32.986  INFO 24152 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2021-12-26 12:47:33.969  WARN 24152 --- [nio-8080-exec-1] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [701] milliseconds.
+2021-12-26 12:47:45.634  INFO 24152 --- [nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-12-26 12:47:45.667  INFO 24152 --- [nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
 WARNING: An illegal reflective access operation has occurred
 WARNING: Illegal reflective access by org.apache.ibatis.reflection.Reflector (file:/C:/Users/taeey/.m2/repository/org/mybatis/mybatis/3.4.1/mybatis-3.4.1.jar) to method java.lang.Object.finalize()
 WARNING: Please consider reporting this to the maintainers of org.apache.ibatis.reflection.Reflector
 WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
 WARNING: All illegal access operations will be denied in a future release
-2021-12-26 11:38:35.642  WARN 2640 --- [nio-8080-exec-1] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [690] milliseconds.
 ```
 
 ### 오류 화면(MariaDB 가 Running 되지 않을 경우)

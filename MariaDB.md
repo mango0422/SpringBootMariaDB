@@ -199,6 +199,14 @@ values ('NGINX Cookbook', '데릭 디용기', 20000, '2021-06-01');
 insert into books (Title, Author, Price, published_date)
 values ('Learning CoreDNS', '존 벨라마릭,크리켓 리우', 25000, '2021-08-31');
 ```
+
+```
+insert into books (Title, Author, Price, published_date) values
+ ('TCP/IP 완벽 가이드', '강유,김혁진,...', 45000, '2021-12-01'),
+ ('NGINX Cookbook', '데릭 디용기', 20000, '2021-06-01'),
+ ('Learning CoreDNS', '존 벨라마릭,크리켓 리우', 25000, '2021-08-31');
+```
+---
 ```
 MariaDB [tutorial]> insert into books (Title, Author, Price, published_date)
     -> values ('TCP/IP 완벽 가이드', '강유,김혁진,...', 45000, '2021-12-01');
