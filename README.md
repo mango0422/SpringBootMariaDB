@@ -4,15 +4,16 @@
 | 항목 | 버전 |
 |:---|:---|
 | springboot | 2.2.3 |  
+| openJDK | 11.0.11 |  
 | maven | 2.2.3 | 
-| myBatis | 1.3.0 |
+| myBatis | 1.3.0 | 
+| MariaDB | 10.8.0 | 
 
-## DB 정보
+## MariaDB 정보
 | 항목 | 내용 |
 |:---|:---|
-| DB | MariaDB |  
-| version | 10.8.0 |  
 | port | 13306 |  
+| user | tutorial | 
 | database | tutorial | 
 | table | tutorial |
 
