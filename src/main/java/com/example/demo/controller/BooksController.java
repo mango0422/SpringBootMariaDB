@@ -19,7 +19,7 @@ public class BooksController {
 	
 	@RequestMapping("/")
 	public String main( ) {
-		return ("main");	
+		return ("index");	
 	}
 	
 	@RequestMapping("/books")

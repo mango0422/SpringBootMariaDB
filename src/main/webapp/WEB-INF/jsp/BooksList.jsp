@@ -7,33 +7,41 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>SpringBoot + MariaDB</title>
 </head>
 <body>
+    <h1> <font color="#ccccc">Books(SpringBoot + MariaDB, MyBatis) <a href="http://localhost:8080/">Main</a></font></h1>
+    <H2> <font color="#00cccc">BOOKS</font></H2>
     <table>
         <tr>
+            <th>No</th>
             <th>Title</th>
             <th>Author</th>
-            <th>published date</th>
+            <th>Published Date</th>
+            <th>Price</th>
         </tr>
  
     <!-- 
- 	public String title;
-	public String author;
-	public Date published_date;
+ 	private String title;
+	private String author;
+	private Date published_date;
      -->
         <c:forEach var="book" items="${list}">
             <tr>
+                <td><p>${book.seqNo}</p></td>
                 <td><p>${book.title}</p></td>
-                <td><p>${book.author}</p></td>               
-                <td><p>${book.published_Date}</p></td>                 
+                <td><p>${book.author}</p></td>
+                <td><p>${book.published_Date}</p></td>
+                <td><p>${book.price}</p></td>
             </tr>
         </c:forEach>
     </table>
+
+    <H2> <font color="#cccc00">Information</font></H2>
     <table>
         <tr>
-            <th> springframework boot version </th>
-            <td><% String version = org.springframework.core.SpringVersion.getVersion( ); %><%=version%></td>
+            <th><font color="#cccccc">springframework boot version</font></th>
+            <td><font color="#cccccc"><% String version = org.springframework.core.SpringVersion.getVersion( ); %><%=version%></font></td>
         </tr>
     </table>
 </body>

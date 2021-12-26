@@ -70,6 +70,17 @@ MariaDB [mysql]> show tables
 MariaDB [mysql]>
 ```
 
+## 버전확인
+```
+MariaDB [tutorial]> select version( );
++----------------+
+| version( )     |
++----------------+
+| 10.8.0-MariaDB |
++----------------+
+1 row in set (0.000 sec)
+```
+
 ## database 만들기
 ```
 MariaDB [mysql]> create database tutorial
@@ -136,12 +147,12 @@ MariaDB [mysql]>
 		this.published_date = transFormat.parse(publishedDate);
 CREATE TABLE IF NOT EXISTS TUTORIAL.BOOKS
 (
-	SeqNo INT NOT NULL AUTO_INCREMENT,
-	Title VARCHAR(20) NOT NULL,
+  SeqNo INT NOT NULL AUTO_INCREMENT,
+  Title VARCHAR(20) NOT NULL,
   Author VARCHAR(20) NOT NULL,
-	Price DOUBLE NOT NULL DEFAULT 0,
-	published_date DATE NOT NULL,
-	PRIMARY KEY(SeqNo)
+  Price DOUBLE NOT NULL DEFAULT 0,
+  published_date DATE NOT NULL,
+  PRIMARY KEY(SeqNo)
 );
 ```
 ```
@@ -163,6 +174,18 @@ MariaDB [tutorial]> show tables ;
 | books              |
 +--------------------+
 1 row in set (0.001 sec)
+
+MariaDB [tutorial]> describe books ;
++----------------+-------------+------+-----+---------+----------------+
+| Field          | Type        | Null | Key | Default | Extra          |
++----------------+-------------+------+-----+---------+----------------+
+| SeqNo          | int(11)     | NO   | PRI | NULL    | auto_increment |
+| Title          | varchar(20) | NO   |     | NULL    |                |
+| Author         | varchar(20) | NO   |     | NULL    |                |
+| Price          | double      | NO   |     | 0       |                |
+| published_date | date        | NO   |     | NULL    |                |
++----------------+-------------+------+-----+---------+----------------+
+5 rows in set (0.007 sec)
 
 MariaDB [tutorial]>
 ```

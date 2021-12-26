@@ -4,26 +4,36 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class BooksDTO {
+	private int seqNo;
 	private String title;
 	private String author;
 	private Date published_date;
+	private double price;
 	
 	public BooksDTO() {		
 	}
 	
 	public BooksDTO(String Title, String Author) {
 		super( );
+		this.seqNo = SeqNo;
 		this.title = Title;
 		this.author = Author;
 		this.published_date = new Date( );
+		this.price = Price;
 	}
 
 	public BooksDTO(String Title, String Author, String publishedDate) throws Exception {
 		super( );
+		this.seqNo = SeqNo;
 		this.title = Title;
 		this.author = Author;
+		this.price = Price;
 		SimpleDateFormat transFormat = new SimpleDateFormat("yyyy-MM-dd"); // "yyyy-MM-dd HH:mm:ss"
 		this.published_date = transFormat.parse(publishedDate);
+	}
+
+	public int getSeqNo( ) {
+		return (this.seqNo);
 	}
 	
 	public String getTitle( ) {
@@ -40,10 +50,18 @@ public class BooksDTO {
 		String dateString = format.format(this.published_date);
 		return (dateString);	
 	}
-	
+
+	public double getPrice( ) {
+		return (this.price);	
+	}
+
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return "title="+getTitle() +", author="+getAuthor()+", published_date="+getPublished_Date();
+		return "seqNo=" + getSeqNo( ) + 
+		       ", title="+getTitle( ) +
+					 ", author="+getAuthor( ) +
+					 ", published_date=" + getPublished_Date( ) +
+					 ", price=" + getPrice( );
 	}
 }
