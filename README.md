@@ -33,13 +33,13 @@
 | 명령/경로 | 설명 | 
 |:---|:---|  
 | ./mvnw clean install | Maven/target install |  
-| ./mvnw spring-boot:run | Project 실행 |  
 | ./mvnw clean package | Maven/target clean 및 build |  
-| ./mvnw spring-boot:run & | Maven 으로 Springboot 를 백그라운드로 실행 |  
+| ./mvnw spring-boot:run | Maven 으로 Springboot 실행 |  
 | ~/.m2/wrapper/dists | mvnw 로 설치된 maven 배포 경로 |
 
-./mvnw springboot:run
+./mvnw spring-boot:run  
 http://localhost:8080/books
+![localhost-8080-books.png](./img/localhost-8080-books.png)  
 
 ## 빌드 : ./mvnw clean install 
 ```
