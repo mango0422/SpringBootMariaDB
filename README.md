@@ -31,9 +31,10 @@
 ```
 
 ## 접속
-http://localhost:8080/books
+http://localhost:8080/
 
 ### 정상 동작 화면
+![localhost-8080-books.png](./img/localhost-8080-index.png)  
 ![localhost-8080-books.png](./img/localhost-8080-books.png)  
 #### 실행 로그
 ```powershell
