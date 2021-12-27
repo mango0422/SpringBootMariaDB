@@ -13,7 +13,10 @@ public class BooksDTO {
 	public BooksDTO() {		
 	}
 	
-	public BooksDTO(String Title, String Author) {
+	public BooksDTO(int SeqNo,
+	  String Title,
+		String Author,
+		double Price) {
 		super( );
 		this.seqNo = SeqNo;
 		this.title = Title;
@@ -22,7 +25,7 @@ public class BooksDTO {
 		this.price = Price;
 	}
 
-	public BooksDTO(String Title, String Author, String publishedDate) throws Exception {
+	public BooksDTO(int SeqNo, String Title, String Author, String publishedDate, double Price) throws Exception {
 		super( );
 		this.seqNo = SeqNo;
 		this.title = Title;
@@ -59,8 +62,8 @@ public class BooksDTO {
 	public String toString() {
 		// TODO Auto-generated method stub
 		return "seqNo=" + getSeqNo( ) + 
-		       ", title="+getTitle( ) +
-					 ", author="+getAuthor( ) +
+		       ", title="+ getTitle( ) +
+					 ", author="+ getAuthor( ) +
 					 ", published_date=" + getPublished_Date( ) +
 					 ", price=" + getPrice( );
 	}

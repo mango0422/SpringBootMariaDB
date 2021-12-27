@@ -485,3 +485,107 @@ PS C:\workspace\SpringBootMariaDB> ./mvnw spring-boot:run
 2021-12-25 21:33:49.480  INFO 12356 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
 2021-12-25 21:33:49.483  INFO 12356 --- [           main] c.e.demo.SpringBootSampleApplication     : Started SpringBootSampleApplication in 2.179 seconds (JVM running for 2.461)
 ```
+
+## TroubleShooting
+### 오류 - Maven- No plugin found for prefix 'spring-boot' in the current project and in the plugin groups
+```
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  5.676 s
+[INFO] Finished at: 2021-12-27T18:39:19+09:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] No plugin found for prefix 'sprint-boot' in the current project and in the plugin groups [org.apache.maven.plugins, org.codehaus.mojo] available from the repositories [local (C:\Users\Administrator\.m2\repository), central (https://repo.maven.apache.org/maven2)] -> [Help 1]
+[ERROR]
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR]
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/NoPluginFoundForPrefixException
+```
+### 해결 - pom.xml 에 spring-boot-plugin 추가
+[Stackoverflow](https://stackoverflow.com/questions/30855864/maven-no-plugin-found-for-prefix-spring-boot-in-the-current-project-and-in-th)
+#### plugin 추가없이 실행하는 방법
+- mvn org.springframework.boot:spring-boot-maven-plugin:run
+```
+PS D:\workspace\SpringBootMariaDB> ./mvnw org.springframework.boot:spring-boot-maven-plugin:run
+
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------< com.example:SpringBootSample >--------------------
+[INFO] Building SpringBootSample 0.0.1-SNAPSHOT
+[INFO] --------------------------------[ war ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot-maven-plugin:2.2.3.RELEASE:run (default-cli) > test-compile @ SpringBootSample >>>
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ SpringBootSample ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ SpringBootSample ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO]
+[INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ SpringBootSample ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory D:\workspace\SpringBootMariaDB\src\test\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ SpringBootSample ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO]
+[INFO] <<< spring-boot-maven-plugin:2.2.3.RELEASE:run (default-cli) < test-compile @ SpringBootSample <<<
+[INFO]
+[INFO]
+[INFO] --- spring-boot-maven-plugin:2.2.3.RELEASE:run (default-cli) @ SpringBootSample ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.2.3.RELEASE)
+
+2021-12-27 18:42:20.462  INFO 8644 --- [           main] c.e.demo.SpringBootSampleApplication     : Starting SpringBootSampleApplication on SKCC19N00960 with PID 8644 (D:\workspace\SpringBootMariaDB\target\classes started by Administrator in D:\workspace\SpringBootMariaDB)
+2021-12-27 18:42:20.465  INFO 8644 --- [           main] c.e.demo.SpringBootSampleApplication     : No active profile set, falling back to default profiles: default
+2021-12-27 18:42:21.730  INFO 8644 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-12-27 18:42:21.743  INFO 8644 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-12-27 18:42:21.744  INFO 8644 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]    
+2021-12-27 18:42:22.065  INFO 8644 --- [           main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2021-12-27 18:42:22.069  INFO 8644 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-12-27 18:42:22.069  INFO 8644 --- [           main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1543 ms
+2021-12-27 18:42:22.464  INFO 8644 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-12-27 18:42:22.546  INFO 8644 --- [           main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-12-27 18:42:22.708  INFO 8644 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-12-27 18:42:22.712  INFO 8644 --- [           main] c.e.demo.SpringBootSampleApplication     : Started SpringBootSampleApplication in 2.687 seconds (JVM running for 3.692)
+2021-12-27 18:42:27.258  INFO 8644 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-12-27 18:42:27.259  INFO 8644 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-12-27 18:42:27.267  INFO 8644 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2021-12-27 18:42:29.865  INFO 8644 --- [nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-12-27 18:42:29.919  INFO 8644 --- [nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+
+
+
+
+
+```
+
+#### pox.xml 에 plugin 추가
+```
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<dependencies>
+					<dependency>
+							<groupId>org.springframework</groupId>
+							<artifactId>springloaded</artifactId>
+							<version>1.2.1.RELEASE</version>
+					</dependency>
+			  </dependencies>
+			</plugin>
+		</plugins>
+	</build>
+```
