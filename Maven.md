@@ -27,6 +27,59 @@
   | maven-wrapper.jar | wrapper shell scripts 로 부터 maven 을 실행하고, 다운로드 하는데 사용됩니다. |  
   | maven-wrapper.properties | Maven 이 존재하지 않는 경우 다운로드하기 위한 URL 을 명시하기 위해서 사용됩니다. |  
 
+### Maven 명령어
+| 명령 | 설명 | 
+|:---|:---|  
+| compile | 컴파일 수행 |
+| test | 컴파일 수행 후 테스트 클래스 수행 |
+| package | 컴파일을 수행하고 컴파일한 소스를 packaging 양식(war or jar)에 맞춰 프로젝트 내 지정한 경로(eg.target) 디렉토리에 생성 |
+| install | package 한것에 추가적으로 로컬 repository에 배포한다.  |
+| deploy | install 한것에 추가적으로 원격 repository(nexus)에 배포한다. |
+| clean | maven build 시 생성된 모든 것들을 삭제한다. |  
+
+### Maven 옵션
+| 옵션 | 설명 | 
+|:---|:---|  
+| -am,--also-make | 프로젝트 목록이 지정된 경우 목록에 필요한 프로젝트도 빌드하십시오. |
+| -amd,--also-make-dependents | 프로젝트 목록이 지정된 경우 목록의 프로젝트에 의존하는 프로젝트도 빌드하십시오. | 
+| -B,--batch-mode | 비 대화식 (일괄 처리) 모드에서 실행 (출력 색상 비활성화) | 
+| -b,--builder | 사용할 빌드 전략의 ID |
+| -C,--strict-checksums | 체크섬이 일치하지 않으면 빌드 실패 |  
+| -c,--lax-checksums | 체크섬이 일치하지 않으면 경고 |  
+| -cpu,--check-plugin-updates | 비효율적이며 이전 버전과의 호환성을 위해서만 유지|
+| -D,--define |시스템 속성 정의 |  
+| -e,--errors | 실행 오류 메시지 생성 |  
+| -emp,--encrypt-master-password | 마스터 보안 비밀번호 암호화  |  
+| -ep,--encrypt-password | 서버 비밀번호 암호화 | 
+| -f,--file | 대체 POM 파일 (또는 pom.xml이있는 디렉토리)을 사용하도록합니다. |
+| -fae,--fail-at-end | 이후에는 빌드에 실패합니다. 영향을받지 않은 모든 빌드가 계속되도록 허용 |
+| -ff,--fail-fast | 원자로 빌드에서 처음 실패시 중지 |
+| -fn,--fail-never | 프로젝트 결과에 관계없이 빌드에 실패하지 마십시오. |
+| -gs,--global-settings | 글로벌 설정 파일의 대체 경로 |
+| -gt,--global-toolchains 글로벌 툴체인 파일의 대체 경로 |
+| -h,--help | 도움말 정보 표시 |
+| -l,--log-file | 모든 빌드 출력이 진행되는 로그 파일 (출력 색상 비활성화) | 
+| -llr,--legacy-local-repository | Maven 2 레거시 로컬 리포지토리 동작, 즉 _remote.repositories를 사용하지 마십시오.  -Dmaven.legacyLocalRepo = true를 사용하여 활성화 할 수도 있습니다. |
+| -N,--non-recursive | 하위 프로젝트로 재귀하지 마십시오 |
+| -npr,--no-plugin-registry | 비효율적이며 이전 버전과의 호환성을 위해서만 유지 | 
+| -npu,--no-plugin-updates | 비효율적이며 이전 버전과의 호환성을 위해서만 유지 | 
+| -nsu,--no-snapshot-updates | SNAPSHOT 업데이트 억제 |
+| -ntp,--no-transfer-progress | 다운로드 또는 업로드시 전송 진행률을 표시하지 않습니다 |
+| -o,--offline | 오프라인으로 작업 |
+| -P,--activate-profiles | 활성화 할 쉼표로 구분 된 프로파일 목록 |
+| -pl,--projects | 모든 프로젝트 대신 빌드 할 지정된 원자로 프로젝트의 쉼표로 구분 된 목록입니다. [groupId] : artifactId 또는 상대 경로로 프로젝트를 지정할 수 있습니다. |
+| -q,--quiet | 조용한 출력-오류 만 표시 |
+| -rf,--resume-from | 지정된 프로젝트에서 원자로 재개 |
+| -s,--settings | 사용자 설정 파일의 대체 경로 |
+| -t,--toolchains | 사용자 툴체인 파일의 대체 경로 |
+| -T,--threads | 스레드 수 (예 : C에 코어를 곱한 2.0C) |
+| -U,--update-snapshots | 원격 리포지토리에서 누락 된 릴리스 및 업데이트 된 스냅 샷을 검사합니다. |
+| -up,--update-plugins | 비효율적이며 이전 버전과의 호환성을 위해서만 유지 |
+| -v,--version | 버전 정보 표시 -V,--show-version 빌드를 중단하지 않고 버전 정보 표시 | 
+| -X,--debug | 실행 디버그 출력 생성 | 
+
+
+
 ### Maven Wrapper 실행하기
 | 명령/경로 | 설명 | 
 |:---|:---|  
