@@ -88,5 +88,23 @@ public class SpringBootSampleApplication extends SpringBootServletInitializer {
 <packaging>war</packaging>
 ```
 
+## Tomcat 에 WAR 파일 설정하기
+> [Tomcat에 WAR 파일 배포해서 기동하기](https://oingdaddy.tistory.com/344)
+- webapps 밑에 ROOT 디렉토리 삭제 후 ROOT.war 로 배포
+- server.xml 에 "<Context> " 추가하기
+### server.xml 에 <Context> 내용 추가하기
+- "SpringBootSample-0.0.1-SNAPSHOT.war" 일 경우 ".war" 제거 후 아래와 같이 기술
+```xml
+      <Host name="localhost"  appBase="webapps" unpackWARs="true" autoDeploy="true">
+        <Context path="" docBase="SpringBootSample-0.0.1-SNAPSHOT" reloadable="false" />
 
-출처: https://4urdev.tistory.com/84 [Simplify]
+        <!-- Access log processes all example.
+             Documentation at: /docs/config/valve.html
+             Note: The pattern used is equivalent to using pattern="common" -->
+        <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs"
+               prefix="localhost_access_log" suffix=".txt"
+               pattern="%h %l %u %t &quot;%r&quot; %s %b" />
+
+      </Host>
+    </Engine>
+```
