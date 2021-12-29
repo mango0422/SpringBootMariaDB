@@ -5,7 +5,7 @@
 |:---|:---|:---|
 | 운영체계 | Windows | 10,11 | 
 | 웹서버 | [Apache](https://httpd.apache.org/) | [2.4.52](https://www.apachelounge.com/download/) | 
-| WAS 서버 | [Tomcat](https://tomcat.apache.org/) | 10.0.14 |  
+| WAS 서버 | [Tomcat](https://tomcat.apache.org/) | [10.0.14](https://dlcdn.apache.org/tomcat/tomcat-10/v10.0.14/bin/apache-tomcat-10.0.14.exe) |  
 | 개발/실행 도구 | [OpenJDK](https://openjdk.java.net/)| [17.0.1](https://jdk.java.net/17/) |  
 | 통합개발환경 | [Visual Studio Code](https://code.visualstudio.com/) | 1.63.2 |   
 | 프레임워크 | [Spring Boot](https://spring.io/projects/spring-boot) | 2.6.2 |  

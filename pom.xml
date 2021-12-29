@@ -63,10 +63,13 @@
 		</dependency>
 		
 		<!-- JSTL for JSP -->
+		<!-- https://mvnrepository.com/artifact/javax.servlet/jstl -->
 		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>jstl</artifactId>
+				<groupId>javax.servlet</groupId>
+				<artifactId>jstl</artifactId>
+				<version>1.2</version>
 		</dependency>
+
 		
 		<!--  Need this to compile JSP -->
 		<dependency>
