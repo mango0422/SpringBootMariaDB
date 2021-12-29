@@ -2,6 +2,7 @@
 - 스프링 프레임워크 기반 프로젝트를 복잡한 설정없이 쉽고 빠르게 만들어주는 라이브러리
 - Microservices, Reactive, Cloud, Web apps, Serverless, Event Driven, Batch
 
+
 ## 특징
 ### 기본설정이 되어있는 starter 컴포너트를 제공(Library 관리의 자동화)
 - spring boot 의 Starter 라이브러리를 등록해서 라이브러리 의존성을 간단하게 관리할 수 있음
@@ -47,3 +48,45 @@
 - org.springframework.beans.factory.annotation.Autowired
 - 필요한 의존 객체의 "Type"에 해당하는 Bean 을 찾아 주입
 
+## Spring Boot WAR 배포하기
+> [Spring Boot WAR 로 배포하기 (How to deploy with *.war file with Spring Boot)](https://4urdev.tistory.com/84)
+
+### 1. SpringBootServletInitializer 상속받는 것으로 변경
+- src/java/com/example/demo/SpringBootSampleApplication.java
+- SpringBootServletInitializer 상속받기
+```java
+package com.example.demo;
+
+// import com.example.demo.controller.*;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
+
+
+@SpringBootApplication
+public class SpringBootSampleApplication extends SpringBootServletInitializer {
+	
+	public static void main(String[] args) {
+		SpringApplication.run(SpringBootSampleApplication.class, args);
+	}
+
+}
+```
+### 2. Embed servlet 을 'provided' 로 변경
+- pom.xml
+```xml
+		<!--  Tomcat embeded container -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>provided</scope>
+```
+### 3. war로 빌드
+- pom.xml
+```xml
+<packaging>war</packaging>
+```
+
+
+출처: https://4urdev.tistory.com/84 [Simplify]
