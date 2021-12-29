@@ -19,7 +19,7 @@
 - mvnw 의 윈도우 배치 버전 shell script 입니다.
 
 #### .mvn directory
-- 아래 3개의 파일 있으며, 이 파일들을 통해서 Maven 이 존재하지 않아도 특정 버전과 classpath 를 가지고 공통된 Maven 을 다운로드 및 사용할 수 있게 됩니다.
+- 아래 3개의 파일 있으며, 이 파일들을 통해서 Maven 이 존재하지 않아도 특정 버전과 classpath 를 가지고 공통된 Maven 을 다운로드 및 사용할 수 있게 됩니다.  
   ![mvn-directory.png](./img/mvn-directory.png)
   | File | 설명 |
   |:---|:---|
