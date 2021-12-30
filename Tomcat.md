@@ -4,7 +4,7 @@
 ![tomcat9-webapps.png](./img/tomcat9-webapps.png)
 
 ## tomcat 기동
-![tomcat-9.png](./img/tomcat-9.png)
+![tomcat-9.png](./img/tomcat9.png)
 
 ## WAR 배포 후 "localhost:8080" 접속 초기 화면
-![tomcat-9-browser.png](./img/tomcat-9-browser.png)
+![tomcat-9-browser.png](./img/tomcat9-browser.png)
