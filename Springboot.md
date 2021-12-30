@@ -108,3 +108,17 @@ public class SpringBootSampleApplication extends SpringBootServletInitializer {
       </Host>
     </Engine>
 ```
+
+## Tomcat 10 에 배포시 주의할 점
+>[[Tomcat] Spring Boot 프로젝트 Tomcat 10에서 배포하기](https://adg0609.tistory.com/57?category=876826)
+
+- Tomcat 9 와 pom.xml, server.xml 은 동일하게 설정
+- .war 배포시 아래의 절차대로 수행
+  - $TOMCAT_HOME에 webapps-javaee 란 폴더 생성
+  - webapps 폴더 내의 모든 파일 삭제
+  - webapps-javaee 에 "SpringBootSample-0.0.1-SNAPSHOT.war"를 옮겨 놓음
+  - tomcat 를 기동 시킴
+  ![tomcat10-directory.png](./img/tomcat10-directory.png)   
+  ![tomcat10-directory-webapps-javaee.png](./img/tomcat10-directory-webapps-javaee.png)  
+  ![tomcat10-directory-webapps.png](./img/tomcat10-directory-webapps.png)
+
