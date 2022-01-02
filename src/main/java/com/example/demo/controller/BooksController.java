@@ -17,12 +17,12 @@ public class BooksController {
 	@Autowired
 	DbService dbService;
 	
-	@RequestMapping("/")
+	@RequestMapping("/home.do")
 	public String main( ) {
 		return ("book");	
 	}
 	
-	@RequestMapping("/books")
+	@RequestMapping("/books.do")
 	public ModelAndView dbTest( ) throws Exception {
 		List <BooksDTO> list = new ArrayList<BooksDTO> ( );
 		list = dbService.getList( );

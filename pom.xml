@@ -26,6 +26,14 @@
 			<artifactId>spring-boot-starter</artifactId>
 			<version>2.6.2</version>
 		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<scope>runtime</scope>
+			<optional>true</optional>
+		</dependency>
+
 		<!--  Thie is web application -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

@@ -10,7 +10,7 @@
 <title>SpringBoot + MariaDB</title>
 </head>
 <body>
-    <h1> <font color="#ccccc">Books(SpringBoot + MariaDB, MyBatis) <a href="/books/">Main</a></font></h1>
+    <h1> <font color="#ccccc">Books(SpringBoot + MariaDB, MyBatis) <a href="/home.do">Main</a></font></h1>
     <H2> <font color="#00cccc">BOOKS</font></H2>
     <table>
         <tr>

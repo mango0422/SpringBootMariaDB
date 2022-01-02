@@ -28,6 +28,8 @@
 ### 사용화에 필요한 통계, 상태 체크, 외부 설정 등을 제공
 ### 설정을 위한 XML 코드를 생성하거나 요구하지 않음
 
+---
+
 ## SpringController Annotation
 ### @Controller
 - 적용된 클래스는 "Controller"임을 나타나고, bean으로 등록되며 해당 클래스가 Controller로 사용됨을 Spring Framework에 알림

@@ -8,7 +8,7 @@
 <title>MAIN PAGE</title>
 </head>
 <body>
-    <h1>Books(SpringBoot + MariaDB, MyBatis) <a href="/books/books">List</a></h1>
+    <h1>Books(SpringBoot + MariaDB, MyBatis) <a href="/books.do">List</a></h1>
     <H2> <font color="#00cccc">BOOKS</font></H2>
     <table>
     <tr>

@@ -115,3 +115,10 @@ WARNING: All illegal access operations will be denied in a future release
 
 ### 오류 화면(MariaDB 가 Running 되지 않을 경우)
 ![error-connection-refused-mariadb.png](./img/error-connection-refused-mariadb.png)  
+
+## .do 로 변경 후 화면
+- [http://localhost:8080/home.do](http://localhost:8080/home.do)
+  ![apache-home.do.png](./img/apache-home.do.png)
+- [http://localhost:8080/books](http://localhost:8080/books.do)
+  ![apache-books.do.png](./img/apache-books.do.png)
+
