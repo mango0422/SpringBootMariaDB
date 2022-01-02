@@ -5,7 +5,8 @@
 |:---|:---|:---|
 | 운영체계 | Windows | 10,11 | 
 | 웹서버 | [Apache](https://httpd.apache.org/) | [2.4.52](https://www.apachelounge.com/download/) | 
-| WAS 연계 모듈 | mod_jk | [1.2.48](https://www.apachelounge.com/download/VS16/modules/mod_jk-1.2.48-win64-VS16.zip) |  
+| WAS 연계 모듈 | [mod_jk](https://downloads.apache.org/tomcat/tomcat-connectors/jk/
+) | [1.2.48](https://www.apachelounge.com/download/VS16/modules/mod_jk-1.2.48-win64-VS16.zip) |  
 | WAS 서버 | [Tomcat](https://tomcat.apache.org/) | [9.0.56](https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.56/bin/apache-tomcat-9.0.56.exe) </br> [10.0.14](https://dlcdn.apache.org/tomcat/tomcat-10/v10.0.14/bin/apache-tomcat-10.0.14.exe) |  
 | 개발/실행 도구 | [OpenJDK](https://openjdk.java.net/)| [17.0.1](https://jdk.java.net/17/) |  
 | 통합개발환경 | [Visual Studio Code](https://code.visualstudio.com/) | 1.63.2 |   
