@@ -1,10 +1,11 @@
 # Maven
-
+- 자바 프로젝트 빌드 자동화 도구
 ## [Maven 래퍼에 대한 빠른 가이드](https://www.baeldung.com/maven-wrapper)
 
 
 ### Maven Diretory
 ![maven-directory.png](./img/maven-directory.png)
+
 
 ### mvn
 - mvn -N io.takari:maven:wrapper
