@@ -4,7 +4,7 @@
 ![apache24-conf.png](./img/apache24-conf.png)  
 
 ## apache 의 httpd.conf  설정
-- Directory : C:\Apache24
+- Apache 설치된 Directory 위치 조정 : C:\Apache24
 - httpd conf 위치 : conf/httpd.conf
 - Listen Port 설정
 - mod_jk 사용 설정
@@ -78,6 +78,7 @@
   .
   .
   ```
+
 - workers.properties
   ```
   # worker.list=jvm1,jvm2

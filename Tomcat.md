@@ -11,6 +11,9 @@
 
 ## Apache 와 연동 (mod_jk 연동) 설정
 ### AJP 설정의 주석 해제
+- address 를 삭제하거나 address를 localhost 로 설정
+- 아래 설정에서는 제거
+- address="localhost"
 - server.xml
   ```xml
       <Connector protocol="AJP/1.3"              
