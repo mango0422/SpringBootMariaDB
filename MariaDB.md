@@ -2,7 +2,7 @@
 
 ## 접속하기
 ```
-PS C:\Users\taeey> mysql -u root -p -h localhost --port 13306
+PS C:\Users\taeey> mysql -u root -p -h localhost --port 3306
 Enter password: ****
 Welcome to the MariaDB monitor.  Commands end with ; or \g.
 Your MariaDB connection id is 9
