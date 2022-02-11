@@ -1,4 +1,4 @@
-﻿# SpringBoot MariaDB Sample
+﻿# SpringBoot MariaDB Sample 1
 
 ## 실행 환경
 | 구분 | 항목 | 버전 |
